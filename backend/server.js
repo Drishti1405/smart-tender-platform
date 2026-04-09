@@ -10,6 +10,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Basic route to check if API is alive in the browser
+app.get('/', (req, res) => {
+  res.send('Smart Tender API is successfully running!');
+});
+
 // Define the User Schema for MongoDB
 const UserSchema = new mongoose.Schema({
   name: { type: String, required: true },
