@@ -1,8 +1,10 @@
 import { User } from '../types';
 
-const API_URL = import.meta.env.VITE_API_URL 
-  ? `${import.meta.env.VITE_API_URL}/api/auth`
-  : 'https://smart-tender-platform.vercel.app/api/auth';
+let base = import.meta.env.VITE_API_URL || 'https://smart-tender-platform.vercel.app';
+if (!base.startsWith('http')) {
+  base = `https://${base}`;
+}
+const API_URL = `${base}/api/auth`;
 
 export const authService = {
   async register(data: Omit<User, 'id'>) {
