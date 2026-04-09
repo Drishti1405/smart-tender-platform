@@ -1,0 +1,8 @@
+{
+  "name": "Smart Tender Evaluation Platform (STEP)",
+  "description": "A high-performance tender management and automated AI-driven evaluation system. Supports Needer and Vendor roles with real-time deadline management, multi-criteria scoring, and collaborative chat.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

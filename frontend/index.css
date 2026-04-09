@@ -1,0 +1,163 @@
+:root {
+  /* Colors - Modern Multi-Hue Professional Palette */
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.15);
+  
+  --secondary: #0f172a;
+  --secondary-hover: #1e293b;
+  
+  /* Vibrant Semantic Accents */
+  --clr-success: #10b981;
+  --clr-success-bg: rgba(16, 185, 129, 0.08);
+  --clr-success-border: rgba(16, 185, 129, 0.2);
+  
+  --clr-info: #3b82f6;
+  --clr-info-bg: rgba(59, 130, 246, 0.08);
+  --clr-info-border: rgba(59, 130, 246, 0.2);
+  
+  --clr-warning: #f59e0b;
+  --clr-warning-bg: rgba(245, 158, 11, 0.08);
+  --clr-warning-border: rgba(245, 158, 11, 0.2);
+  
+  --clr-danger: #ef4444;
+  --clr-danger-bg: rgba(239, 68, 68, 0.08);
+  --clr-danger-border: rgba(239, 68, 68, 0.2);
+  
+  /* Category / Brand Accents */
+  --clr-accent-teal: #0d9488;
+  --clr-accent-violet: #8b5cf6;
+  --clr-accent-pink: #ec4899;
+  --clr-accent-orange: #f97316;
+  
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  
+  --border-light: #e2e8f0;
+  --border-strong: #cbd5e1;
+  
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-disabled: #94a3b8;
+
+  /* Spacing & Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+}
+
+/* Base Styles Refinement */
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* Elite Typography */
+.font-outfit { font-family: 'Outfit', sans-serif; }
+.italic-custom { font-style: italic; font-family: 'Outfit', sans-serif; font-weight: 300; }
+
+/* Vibrant Modern Gradients */
+.grad-indigo { background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); }
+.grad-emerald { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+.grad-sky { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); }
+.grad-rose { background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); }
+.grad-sunset { background: linear-gradient(135deg, #f97316 0%, #ec4899 100%); }
+.grad-ocean { background: linear-gradient(135deg, #0ea5e9 0%, #2dd4bf 100%); }
+
+/* Specialized Glassmorphism */
+.glass-effect {
+  background: var(--bg-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Card & Interactive Elevation */
+.shadow-premium {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04), 
+              0 2px 10px -4px rgba(0, 0, 0, 0.02);
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Form Interactivity */
+input, textarea, select {
+  border-radius: var(--radius-md) !important;
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  background-color: white !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 5px var(--primary-glow) !important;
+}
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { 
+  from { opacity: 0; transform: translateY(30px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.animate-fade { animation: fadeIn 0.8s ease-out forwards; }
+.animate-slide-up { animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.animate-shake { animation: shake 0.4s ease-in-out; }
+
+/* Custom Scrollbar Elite */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+  border: 2px solid var(--bg-main);
+}
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Badge Refinement */
+.badge-indigo { background: rgba(99, 102, 241, 0.1); color: #6366f1; }
+.badge-emerald { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.badge-rose { background: rgba(244, 63, 94, 0.1); color: #f43f5e; }
+.badge-amber { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.badge-sky { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+
+/* Button Mastery */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--primary-glow);
+}
+
+/* Utility to Tint Large UI Sections without losing minimalism */
+.section-tint-blue { background: linear-gradient(180deg, rgba(59, 130, 246, 0.02) 0%, transparent 100%); }
+.section-tint-emerald { background: linear-gradient(180deg, rgba(16, 185, 129, 0.02) 0%, transparent 100%); }
+.section-tint-indigo { background: linear-gradient(180deg, rgba(99, 102, 241, 0.02) 0%, transparent 100%); }
+
